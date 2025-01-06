@@ -1,0 +1,9 @@
+
+Correlation Analysis Summary:
+- Correlation between time and S&P 500: 0.88
+- Correlation between time and DJIA: 0.91
+- Correlation between time and HSI: 0.88
+
+Key Observations:
+- Positive correlation values indicate that index prices have increased over time.
+- Heatmap visually represents the relationships between time and index prices.
