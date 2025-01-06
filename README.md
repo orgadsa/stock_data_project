@@ -46,7 +46,14 @@ python main.py analyze --plot
     python main.py etl --clean
 2. Transformed the cleam data
     python main.py etl --transform
-3. Analysis - compute correlation
+3. Upload data to DB
+    python main.py etl --upload
+4. Analysis - compute correlation
     python main.py analyze --correlation
-4. Generate time series plots
+5. Generate time series plots
     python main.py analyze --plot
+6. To use the SQL db
+  Use the sqlite3 CLI:
+  sqlite3 data/stock_data.db
+  exit:
+  .exit

@@ -1,4 +1,3 @@
-# cli.py
 import argparse
 from scripts import etl, analysis
 
@@ -10,6 +9,7 @@ def main():
     etl_parser = subparsers.add_parser("etl", help="Run the ETL process")
     etl_parser.add_argument("--clean", action="store_true", help="Clean raw data")
     etl_parser.add_argument("--transform", action="store_true", help="Transform cleaned data")
+    etl_parser.add_argument("--upload", action="store_true", help="Upload transformed data to database")
 
     # Analysis Command
     analysis_parser = subparsers.add_parser("analyze", help="Run data analysis and visualization")
@@ -25,6 +25,9 @@ def main():
         if args.transform:
             print("Running data transformation...")
             etl.transform_data()
+        if args.upload:
+            print("Uploading data to database...")
+            etl.upload_to_db()
     elif args.command == "analyze":
         if args.correlation:
             print("Computing correlation...")
