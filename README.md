@@ -41,7 +41,7 @@ python main.py analyze --plot
 3. Install dep
     pip install -r requirements.txt
 
-## ETL commands
+## Commands
 1. Clean the data
     python main.py etl --clean
 2. Transformed the cleam data
@@ -57,3 +57,27 @@ python main.py analyze --plot
   sqlite3 data/stock_data.db
   exit:
   .exit
+   
+## Continuous Integration (CI)
+This project uses GitHub Actions for Continuous Integration to ensure code quality and reliability. The CI workflow is triggered on every push to the main branch or on pull requests. It performs the following steps:
+
+# CI Workflow Overview
+Environment Setup:
+
+The workflow runs on ubuntu-latest.
+It tests the code on multiple Python versions (3.8, 3.9, and 3.10).
+Steps Performed:
+
+Checkout Code: Fetches the latest version of the code from the repository.
+Set Up Python: Installs the specified Python version using the setup-python action.
+Install Dependencies: Installs all required dependencies from requirements.txt.
+Run Unit Tests:
+Executes tests located in the tests/ directory using pytest.
+Ensures all tests pass successfully before proceeding.
+Code Style Check with Flake8:
+Lints the codebase to ensure adherence to Python coding standards.
+Code Formatting Check with Black:
+Verifies that the codebase is properly formatted according to Black.
+Debugging:
+
+If errors occur, the workflow logs can be reviewed to identify issues. You can also add a Debug - List files step in the workflow to verify the file structure during CI runs.
