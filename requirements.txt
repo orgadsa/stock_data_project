@@ -3,3 +3,6 @@ matplotlib
 seaborn
 argparse
 sqlalchemy
+flake8
+black
+pytest
