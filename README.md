@@ -61,7 +61,7 @@ python main.py analyze --plot
 ## Continuous Integration (CI)
 This project uses GitHub Actions for Continuous Integration to ensure code quality and reliability. The CI workflow is triggered on every push to the main branch or on pull requests. It performs the following steps:
 
-# CI Workflow Overview
+### CI Workflow Overview
 Environment Setup:
 
 The workflow runs on ubuntu-latest.
